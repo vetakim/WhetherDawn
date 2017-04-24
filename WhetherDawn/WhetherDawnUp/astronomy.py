@@ -20,6 +20,15 @@ def dms2rads(d, m, s):
     degs = d + m / MINUTES + s / SECONDS
     return radians(degs)
 
+def rads2dms(rads):
+    mindeg = modf(degrees(rads))
+    deg = mindeg[1]
+    secmin = modf(mindeg[0] * 60)
+    minutes = secmin[1]
+    sec = secmin[0] * 60
+    return deg, minutes, sec
+
+
 def getJDN(_date):
     '''get julian day by grigorian date'''
     a = ( 14 - _date.month ) // 12
@@ -43,18 +52,21 @@ def getSunHourAngle(B, EL, H):
 def getJulianTransit(_date, L):
     '''get julian transit'''
     # mean solar noon
-    J = getJDN(_date) - degrees(L) / GRADUSES
+    # J = getJDN(_date) - degrees(L) / GRADUSES
+    n = getJDN(_date) - 2451545 + 0.0008
+    J = n - degrees(L) / GRADUSES
     # solar mean anomaly
     M = (357.5291 + 0.98560028 * J) % GRADUSES
     # equation of the center
-    M = degrees(M)
+    M = radians(M)
     C = 1.9148 * sin(M) + 0.0200 * sin(2 * M) + 0.0003 * sin(3 * M)
     # ecliptic longitude
     M, C = degrees(M), degrees(C)
-    la = ( M + C + HALFGRADUSES + PERIHELION ) % GRADUSES
+    # la = ( M + C + HALFGRADUSES + PERIHELION ) % GRADUSES
+    la = ( M + C + 180 + 102.9372 ) % 360
     # solar transit
     M, C, la = radians(M), radians(C), radians(la)
-    Jtr = J + 0.0053 * sin(M) - 0.0069 * sin(2 * la)
+    Jtr = 2451545 + J + 0.0053 * sin(M) - 0.0069 * sin(2 * la)
     return Jtr, la
 
 def getDawnTime(B, L, H, _date):
@@ -69,6 +81,7 @@ def getDawnTime(B, L, H, _date):
     jtr, el = getJulianTransit(_date, L)
     w = getSunHourAngle(B, el, H)
     dawn = jtr - degrees(w) / GRADUSES
+    print('jtr %s\tlambda %s\thour angel %s\n' % (jtr, el, w))
     return datetime.fromtimestamp(juliantime2unix(dawn))
 
 def getNightfallTime(B, L, H, _date):
