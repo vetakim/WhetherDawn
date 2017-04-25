@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sunrise and sunset time</title>
-</head>
-<body>
-<p> rise {{results.time_rise}}  </p>
-<p> set {{results.time_set}}</p>
-</body>
-</html>
+{% extends "WhetherDawnUp/base.html" %}
+{% block content %}
+<div class="vfill"> </div>
+<div class="content">
+    <p> Moscow coordinates:</p>
+    <table>
+        <tr> <td> Latitude</td> <td> 0.9730549949445164 rad</td> </tr>
+        <tr> <td> Longitude</td> <td> 0.6565152944112893 rad</td> </tr>
+        <tr> <td> Elevation above sea level </td> <td> 144 meters </td> </tr>
+        <tr> <td> Sunrise time </td> <td> {{ results.time_rise }} </td> </tr>
+        <tr> <td> Sunset time </td> <td> {{ results.time_set }} </td> </tr>
+    </table>
+</div>
+
+<div class="thinvfill"> </div>
+
+<div id="parameters" class="parameters"> </div>
+
+{% endblock %}
