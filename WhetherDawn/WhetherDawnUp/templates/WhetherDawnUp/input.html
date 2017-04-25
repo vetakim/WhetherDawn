@@ -1,4 +1,39 @@
-<form method="POST" class="post-form">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="save btn btn-default">Save</button>
-</form>
+{% extends "WhetherDawnUp/base.html" %}
+{% block content %}
+    <div class="vfill"> </div>
+    <div class="content">
+        <p> Moscow coordinates:</p>
+        <table>
+        <tr> <td> Latitude</td> <td> 0.9730549949445164 rad</td> </tr>
+        <tr> <td> Longitude</td> <td> 0.6565152944112893 rad</td> </tr>
+        <tr> <td> Elevation above sea level </td> <td> 144 meters </td> </tr>
+        </table>
+    </div>
+    <div class="thinvfill"> </div>
+    <div id="parameters" class="parameters">
+        <div class="filler" style="position: relative; top: 5%"> </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+
+            <div class="labelofpar">
+                {{ field.label_tag }}
+            </div>
+
+            <div class="parameter">
+                {{ field }}
+            </div>
+
+            <div class="filler"> </div>
+
+            {% endfor %}
+
+            <div class="parameter">
+                <input type=submit value='Ok'> </input>
+            </div>
+
+            <div class="filler"> </div>
+
+        </form>
+    </div>
+{% endblock %}
