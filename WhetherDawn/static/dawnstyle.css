@@ -1,54 +1,53 @@
-body {
-    background-color: #f5f5f5;
-    overflow: scroll;
-}
-head {
-    background-color: #f5f5f5;
-    overflow: scroll;
-}
-h1 {
-    font-size:1.5em;
+/*colorscheme*/
+.primary-0 { color: #578cb5 }       /* Основной Цвет */
+.primary-1 { color: #578cb5 }
+.primary-2 { color: #633d9c }
+.primary-3 { color: #a6abb5 }
+.primary-4 { color: #d4d9db }
+
+.secondary-a-0 { color: #ffff0a }   /* Вторичный Цвет A */
+.secondary-a-1 { color: #85a67a }
+.secondary-a-2 { color: #4fa833 }
+.secondary-a-3 { color: #bfe3ba }
+.secondary-a-4 { color: #bfe3ba }
+
+.secondary-b-0 { color: #f7995c }   /* Вторичный Цвет B */
+.secondary-b-1 { color: #f7995c }
+.secondary-b-2 { color: #e05e1f }
+.secondary-b-3 { color: #d9ba8c }
+.secondary-b-4 { color: #f0d6ab }
+
+* {
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #586e75;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #F7995C;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ffffff;
     position: fixed;
     left: 25%;
     z-index: 0;
-    background: #f5f5f5;
+    background: #578cb5;
     position: fixed;
-    top: 0px;
+    top: 5px;
 }
 h2 {
     font-size:1.2em;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #93a1a1;
+    /*color: #93a1a1;*/
 }
 p {
-    font-size: 1.2em;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #555555;
-    padding-left: 25px;
-}
-ol {
     font-size: 1em;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-pre {
-    font-size: 1em;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 table {
-    font-size: 10pt;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     border-spacing: 0;
-    color: #555555;
-
 }
 thead {
     font-size:1.2em;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #f5f5f5;
-    background: #2F5468;
     border: 1px solid #fdf6e3;
     height: 25px;
     max-height: 10%;
@@ -62,161 +61,10 @@ td, tr {
     max-width: 90%;
     width: 220px;
     overflow: hidden;
-    font-size: 10pt;
 }
-div {
-    border-radius: 15px;
-    background: #cecece;
-    resize: both;
+form {
+    background: #D4D9DB;
 }
-.rubberblock {
-    display: inline;
-    float: left;
-    width: 50%;
-    min-width: 800px;
-    max-height: 100%;
-    height: 1200px;
-    overflow: hidden;
-    /*border: 1px solid #c5c5c5;*/
-    /*box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);*/
-}
-.rubberblock-inner {
-    display: list-item;
-    float: top;
-    width: 98%;
-    height: 46%;
-    border-radius: 8px;
-    padding: 6px 6px;
-    overflow: auto;
-    box-shadow: 0.0em 0.0em 0px rgba(0,0,0,0.0);
-}
-.rubberfill {
-    display: list-item;
-    background: #ffffff;
-    float: top;
-    max-width: 98%;
-    width: 800px;
-    height: 20px;
-    min-height: 1%;
-    box-shadow: 0.0em 0.0em 0px rgba(0,0,0,0.0);
-}
-
-.leftspace {
-    display: inline;
-    float: left;
-    width: 25%;
-    background-color: #f5f5f5;
-}
-.allspace {
-    position: absolute;
-    opacity: 1;
-    top: 7%;
-    width: 100%;
-    height: 100%;
-}
-
-.parameters {
-    height: 600px;
-    max-width: 20%;
-    width: 250px;
-    display: inline;
-    float: left;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-}
-.vfill {
-    max-height: 50%;
-    height: 900px;
-    max-width: 20%;
-    width: 600px;
-    display: inline;
-    float: left;
-    opacity: 0;
-}
-.thinvfill {
-    max-height: 50%;
-    height: 900px;
-    max-width: 10%;
-    width: 10px;
-    display: inline;
-    float: left;
-    opacity: 0;
-}
-.content {
-    max-height: 50%;
-    height: 600px;
-    max-width: 35%;
-    width: 600px;
-    display: inline;
-    float: left;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-}
-.tests {
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    width: 250px;
-    height: 100%;
-    display: inline;
-    float: left;
-    background: #DCF6AA;
-    overflow: auto;
-
-}
-.knopamax {
-    height: 20px;
-    min-height: 100%
-    background: #ffffff;
-    border-radius: 0px;
-    cursor: pointer;
-    display: inline;
-    float: right;
-    z-index: 1;
-}
-.knopamin {
-    z-index: 1;
-    height: 20px;
-    min-height: 100%;
-    background: #ffffff;
-    border-radius: 0px;
-    cursor: pointer;
-    display: inline;
-    float: right;
-}
-.parameter {
-    background: #c5c5c5;
-    position: relative;
-    top: 5%;
-    left: 55%;
-    max-height: 20%;
-    width: 200px;
-    max-width: 40%;
-    box-shadow: 0.0em 0.0em 0px rgba(122,122,122,0.0);
-    border-radius: 1px;
-}
-.outparameter {
-    background: #2F5468;
-    position: relative;
-    top: -25%;
-    left: 0%;
-    max-height: 15%;
-    width: 200px;
-    max-width: 100%;
-}
-.labelofpar {
-    background: #c5c5c5;
-    position: relative;
-    top: 5%;
-    left: 1%;
-    max-height: 20%;
-    max-width: 54%;
-    width: 200px;
-    box-shadow: 0.0em 0.0em 0px rgba(122,122,122,0.0);
-    border-radius: 1px;
-}
-.filler {
-    height: 15px;
-    box-shadow: 0.0em 0.0em 0px rgba(122,122,122,0.0);
-    border-radius: 1px;
-}
-
 button {
     max-width: 50%;
     width: 200px;
@@ -231,36 +79,212 @@ input {
     width: 200px;
     max-height: 10%;
     height: 30px;
-    /*background-color: #e5e5e5;*/
-    color: #505050;
-    font-size: 12pt;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    border-radius: 5px;
     border: 1px solid #e5e5e5;
+    margin: 5px 5px 5px 5px;
+    border-radius: 10px;
+    padding: 5px;
 }
-
-select {
-    max-width: 100%;
-    width: 200px;
-    max-height: 10%;
-    height: 25px;
-    background-color: #e5e5e5;
-    color: #505050;
-    font-size: 12pt;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    border-radius: 5px;
-    border: 1px solid #e5e5e5;
-}
-
 label {
     position: absolute;
+    padding: 10px;
     left: 5%;
     top: 5%;
     max-width: 55%;
     width: 250px;
     max-height: 20%;
     height: 25px;
-    font-size: 12pt;
-    color: #555555;
+    background: #D4D9DB;
+    color: #578cb5;
+}
+div {
+    resize: both;
 }
 
+.cap{
+    background: #578cb5;
+    color: #ffffff;
+    max-height: 10%;
+    height: 50px;
+    width: 110%;
+    font-size: 100px;
+    margin: 5px;
+    margin-top: -1%;
+    margin-right: -5px;
+    margin-bottom: 0px;
+    margin-left: -1%;
+    padding: 10px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 80px;
+    padding-left: 0px;
+    outline: medium none;
+    outline-width: medium;
+    outline-style: none;
+
+}
+.allspace {
+    position: absolute;
+    opacity: 1;
+    top: 7%;
+    width: 100%;
+    height: 100%;
+}
+.parameters {
+    min-height: 400px;
+    height: 30%;
+    max-width: 20%;
+    width: 250px;
+    display: inline;
+    float: left;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+    background: #D4D9DB;
+    border-radius: 15px;
+}
+.parameter {
+    position: relative;
+    top: 5%;
+    left: 55%;
+    max-height: 20%;
+    width: 200px;
+    max-width: 40%;
+    border-radius: 1px;
+    background: #D4D9DB;
+}
+.vfill {
+    max-height: 50%;
+    height: 900px;
+    max-width: 20%;
+    width: 600px;
+    display: inline;
+    float: left;
+    opacity: 0;
+}
+.thinvfill {
+    max-height: 50%;
+    height: 900px;
+    max-width: 5%;
+    width: 100px;
+    display: inline;
+    float: left;
+    opacity: 0;
+}
+.content{
+    max-height: 50%;
+    height: 600px;
+    max-width: 35%;
+    width: 600px;
+    display: inline;
+    float: left;
+    border: 1px solid #578cb5;
+    border-radius: 10px;
+    margin: 15px 15px 15px 15px;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+.labelofpar {
+    position: relative;
+    top: 10%;
+    left: 1%;
+    max-height: 20%;
+    max-width: 54%;
+    width: 200px;
+    background: #D4D9DB;
+    color: #578CB5;
+    font-size: 1em;
+}
+.ok {
+    position: relative;
+    top: 5%;
+    left: 10%;
+    max-height: 20%;
+    width: 100px;
+    min-width: 90%;
+    background: #D4D9DB;
+    border-radius: 10px;
+}
+.oki {
+    position: relative;
+    background: #F0D6AB;
+    color: #F7995C;
+    border: 1pt solid #F7995C;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.outparameters {
+    height: 200px;
+    max-width: 50%;
+    width: 250px;
+    display: inline;
+    float: left;
+    padding: 10px;
+    margin: 5px 5px 5px 5px;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+    background:#F0D6AB;
+    border-radius: 15px;
+}
+.outparameter {
+    position: relative;
+    top: 5%;
+    left: 0%;
+    max-height: 20%;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 1px;
+    background:#F0D6AB;
+    color: #E05E1F;
+}
+.bubble {
+    position: relative;
+    display: inline;
+    float: left;
+    top: 0%;
+    left: 0%;
+    border-radius: 150px;
+    background: #BFE3BA;
+    padding-top: 50px;
+    padding-left: 50px;
+    margin-left: -10%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 1pt solid #85A67A;
+}
+.bubble > p{
+    font-size: 10pt;
+    background: #BFE3BA;
+    color: #4FA833;
+}
+.bubble > table, td, tr {
+    font-size: 10pt;
+    background: #BFE3BA;
+    border: 0 solid;
+    color: #4FA833;
+}
+.output {
+    position: relative;
+    max-height: 10%;
+    height: 150px;
+    max-width: 85%;
+    width: 250px;
+    background: #ffffff;
+    color: #578CB5;
+    overflow: auto;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 1px;
+}
+.output > p {
+    background: #ffffff;
+    padding-left: 5px;
+    font-size: 1em;
+    color: #F7995C;
+}
+.content > p {
+    position: relative;
+    top: 45%;
+    left: 0%;
+    width: 100%;
+    font-size: 1.em;
+    font-style: italic;
+}
