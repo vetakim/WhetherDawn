@@ -24,7 +24,11 @@
     background: rgba(255, 255, 255, 0);
     color: #F7995C;
 }
-
+table, tbody, tr, td {
+    color: inherit;
+    overflow: hidden;
+    width: inherit;
+}
 h1 {
     font-size: 50pt;
     color: #ffffff;
@@ -40,31 +44,13 @@ h2 {
     /*color: #93a1a1;*/
 }
 p {
+    background: rgba(191, 227, 186, 0);
     font-size: 1em;
-    font-weight: bold;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-thead {
-    font-size:1.2em;
-    border: 1px solid #fdf6e3;
-    height: 25px;
-    max-height: 10%;
-    padding: 0px;
-}
-td, tr {
-    padding: 1px;
-    border: 1px solid #92a1a1;
-    max-height: 15%;
-    height: 10px;
-    max-width: 90%;
-    width: 220px;
-    overflow: hidden;
+    font-weight: normal;
+    color: inherit;
 }
 form {
-    background: #D4D9DB;
+    background: rgba(255, 255, 255, 0);
 }
 button {
     max-width: 50%;
@@ -85,19 +71,6 @@ input {
     padding: 0.1em;
     padding-left: 0.5em;
     background: rgba(255, 255, 255, 1);
-}
-label {
-    position: absolute;
-    padding: 0.1em;
-    padding-left: 0.5em;
-    left: 5%;
-    top: 5%;
-    max-width: 55%;
-    width: 250px;
-    max-height: 20%;
-    height: 1.5em;
-    background: #D4D9DB;
-    color: #578cb5;
 }
 div {
     /*resize: both;*/
@@ -133,36 +106,31 @@ div {
     height: 100%;
 }
 .parameters {
-    min-height: 27em;
-    max-height: 50%;
-    height: 54em;
-    width: 23em;
+    min-height: 16em;
+    max-height: 60%;
+    height: 18em;
+    width: 24em;
     max-width: 30%;
+    min-width: 19em;
     display: inline;
     float: left;
-    padding: 1em;
-    margin: 0px;
+    /*padding: 1ex;*/
+    margin: 2em;
     box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    background: #D4D9DB;
     border-radius: 10px;
-}
-.parameter {
-    position: relative;
-    top: 5%;
-    left: 55%;
-    max-height: 20%;
-    width: 200px;
-    max-width: 45%;
-    border-radius: 1px;
-    background: #D4D9DB;
+    overflow: auto;
 }
 .parameters > input {
-    position: relative;
-    top: 5%;
-    left: 55%;
-    max-height: 1.5em;
-    width: 200px;
-    max-width: 40%;
+    max-width: 30%;
+    width: 7em;
+}
+.parameters > label {
+    max-width: 60%;
+    width: 14em;
+}
+.parameters > tbody, table, tr, td {
+    background: rgba(191, 0, 0, 0);
+    padding: 0px;
 }
 .vfill {
     max-height: 50%;
@@ -182,96 +150,37 @@ div {
     float: left;
     opacity: 0;
 }
-.labelofpar {
-    position: relative;
-    top: 10%;
-    left: 1%;
-    max-height: 20%;
-    max-width: 54%;
-    width: 200px;
-    background: #D4D9DB;
-    color: #578CB5;
-}
 .ok {
     position: relative;
     top: 5%;
     left: 10%;
+    min-height: 1em;
     max-height: 20%;
-    width: 100px;
-    min-width: 90%;
-    background: #D4D9DB;
+    height: 3em;
+    width: 21em;
+    max-width: 90%;
+    min-width: 17.1em;
+    background: rgba(255, 255, 255, 0);
     border-radius: 10px;
 }
 .oki {
     position: relative;
-    background: #F0D6AB;
-    color: #F7995C;
+    background: #f0d6ab;
+    color: #e05e1f;
     border: 1pt solid #F7995C;
     font-weight: bold;
     border-radius: 10px;
 }
-.outparameters {
-    height: 200px;
-    max-width: 50%;
-    width: 250px;
-    display: inline;
-    float: left;
-    padding: 10px;
-    margin: 5px 5px 5px 5px;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    background:#F0D6AB;
-    border-radius: 15px;
-}
-.outparameter {
+.ok.output {
     position: relative;
-    top: 5%;
-    left: 0%;
     max-height: 20%;
-    width: 300px;
-    max-width: 100%;
-    border-radius: 1px;
-    background:#F0D6AB;
-    color: #E05E1F;
-}
-.bubble {
-    position: relative;
-    display: inline;
-    float: left;
-    border-radius: 10em;
-    background: rgba(191, 227, 186, 0.5);
-    padding: 2em;
-    padding-left: 3em;
-    width: 10em;
-    height: 10em;
-    overflow: hidden;
-    border: 1pt solid #85A67A;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    z-index: 0;
-}
-.bubble > p{
-    background: rgba(191, 227, 186, 0);
-    color: #4FA833;
-}
-.bubble > table, td, tr {
-    background: rgba(191, 227, 186, 0);
-    border: 0 solid;
-    color: #4FA833;
-}
-.output {
-    position: relative;
-    max-height: 50%;
-    min-height: 9em;
-    height: 18em;
-    max-width: 85%;
-    width: 250px;
-    background: #ffffff;
-    color: #578CB5;
-    overflow: auto;
+    min-height: 1em;
+    height: 3em;
     border-radius: 10px;
-    margin: 15px;
+    margin: 0px;
     padding: 1px;
 }
-.textcontent{
+.parameters + .textcontent{
     max-height: 50%;
     height: 400px;
     max-width: 60%;
@@ -287,6 +196,7 @@ div {
 .textcontent > p {
     position: relative;
     /*margin-left: -10%;*/
+    padding-left: 2em;
     min-width: 50%;
     max-width: 100%;
     font-style: italic;
@@ -300,4 +210,60 @@ div {
     margin-left: 25%;
     border: 1pt solid #578cb5;
 }
+.content > p {
+    width: 100%;
+    max-width: 80em;
+    padding-left: 5em;
+    margin: 2em;
+}
+.bubble {
+    position: absolute;
+    border-radius: 12em;
+    background: rgba(191, 227, 186, 0.5);
+    padding: 3em;
+    width: 12em;
+    height: 12em;
+    overflow: hidden;
+    border: 1pt solid;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+    z-index: 0;
+    color: #4FA833;
+}
+.littlebubble {
+    position: absolute;
+    border-radius: 8em;
+    background: rgba(255, 255, 10, 0.3);
+    padding: 2em;
+    width: 8em;
+    height: 8em;
+    overflow: hidden;
+    border: 1pt solid;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+    z-index: 0;
+    /*color: #578cb5;       [> Основной Цвет <]*/
+    /*color: #578cb5;*/
+    /*color: #633d9c;*/
+    /*color: #a6abb5;*/
+    /*color: #d4d9db;*/
 
+    /*color: #ffff0a;   [> Вторичный Цвет A <]*/
+    /*color: #85a67a;*/
+    /*color: #4fa833;*/
+    /*color: #bfe3ba;*/
+    /*color: #bfe3ba;*/
+
+    /*color: #f7995c;   [> Вторичный Цвет B <]*/
+    color: #f7995c;
+    /*color: #e05e1f;*/
+    /*color: #d9ba8c;*/
+    /*color: #f0d6ab;*/
+}
+.bubble > p{
+    color: inherit;
+    font-style: italic;
+    font-size: 2em;
+}
+.littlebubble > p{
+    color: inherit;
+    font-style: italic;
+}
