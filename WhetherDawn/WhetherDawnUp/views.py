@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import CoordsForm
+from .forms import CoordsForm, Cities
 from .astronomy import *
 import re
 # Create your views here.
@@ -19,7 +19,9 @@ def input(request):
             a = getDawnTime(dms2rads(d_B, m_B, s_B), dms2rads(d_L, m_L, s_L), f['coord_H'], f['date'])
             b = getNightfallTime(dms2rads(d_B, m_B, s_B), dms2rads(d_L, m_L, s_L), f['coord_H'], f['date'])
             sun = {'time_rise': a, 'time_set': b}
-            return render(request, 'WhetherDawnUp/input.html', {'results': sun, 'form': form})
+            city = Cities()
+            return render(request, 'WhetherDawnUp/input.html', {'results': sun, 'form': form, 'city': city})
     else:
         form = CoordsForm()
-        return render(request, 'WhetherDawnUp/input.html', {'form': form})
+        city = Cities()
+        return render(request, 'WhetherDawnUp/input.html', {'form': form, 'city': city})
