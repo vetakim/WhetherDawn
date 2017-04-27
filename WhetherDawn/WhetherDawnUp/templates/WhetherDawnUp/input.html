@@ -13,14 +13,14 @@
     <div id="parameters" class="parameters">
         <form action="" method="post">
             {% csrf_token %}
-            {% for field in form %}
             <table>
+                {% for field in form %}
                 <tr>
                     <td> {{ field.label_tag }} </td>
                     <td> {{ field }} </td>
                 </tr>
+                {% endfor %}
             </table>
-            {% endfor %}
             <div class="output">
                 <table>
                     <tr> <td> Sunrise time: <td> <td> {{ results.time_rise }} <td> </tr>
@@ -37,6 +37,7 @@
         <p> Смотри, рядом с пивом забрезжило солнце. </p>
         <p> Учти, это солнце сейчас станет блюзом. </p>
         <p> Поверь, этих блюзов надолго не хватит...  </p>
+        <p> {{ city }} </p>
 </div>
 
 {% endblock %}
