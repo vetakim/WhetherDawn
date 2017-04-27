@@ -53,6 +53,7 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
+migrations
 
 # Flask stuff:
 instance/
@@ -91,3 +92,5 @@ ENV/
 
 #PyCharm
 .idea/
+
+
