@@ -5,10 +5,18 @@
     <p> What is the weather like today in Moscow?</p>
 </div>
 
-
 <div class="littlebubble" style="left: 10%; top: 50%;">
     <p> What is the weather like today in Saint Petersburg?</p>
 </div>
+
+<div class="tinybubble" style="left: 20%; top: 70%;">
+    <p> What is the weather like today in Nurlat?</p>
+</div>
+
+<div class="bigbubble" style="left: 55%; top: 20%;">
+    <p> What is the weather like today in London?</p>
+</div>
+
 <div class="content">
     <div id="parameters" class="parameters">
         <form action="" method="post">
@@ -33,11 +41,12 @@
         </form>
     </div>
 
+    <div class="textcontent">
         <p> Проснись, на востоке уже встало пиво. </p>
         <p> Смотри, рядом с пивом забрезжило солнце. </p>
         <p> Учти, это солнце сейчас станет блюзом. </p>
         <p> Поверь, этих блюзов надолго не хватит...  </p>
-        <p> {{ city }} </p>
+    </div>
 </div>
 
 {% endblock %}

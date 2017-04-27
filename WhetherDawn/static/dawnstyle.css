@@ -17,6 +17,44 @@
 .secondary-b-3 { color: #d9ba8c }
 .secondary-b-4 { color: #f0d6ab }
 
+
+/* RGBA коды */
+
+.primary-0 { color: rgba( 87, 140, 181, 1) }        /* Основной Цвет */
+.primary-1 { color: rgba( 87, 140, 181, 1) }
+.primary-2 { color: rgba( 99,  61, 156, 1) }
+.primary-3 { color: rgba(166, 171, 181, 1) }
+.primary-4 { color: rgba(212, 217, 219, 1) }
+
+.secondary-a-0 { color: rgba(255, 255,  10, 1) }    /* Вторичный Цвет A */
+.secondary-a-1 { color: rgba(133, 166, 122, 1) }
+.secondary-a-2 { color: rgba( 79, 168,  51, 1) }
+.secondary-a-3 { color: rgba(191, 227, 186, 1) }
+.secondary-a-4 { color: rgba(191, 227, 186, 1) }
+
+.secondary-b-0 { color: rgba(247, 153,  92, 1) }    /* Вторичный Цвет B */
+.secondary-b-1 { color: rgba(247, 153,  92, 1) }
+.secondary-b-2 { color: rgba(224,  94,  31, 1) }
+.secondary-b-3 { color: rgba(217, 186, 140, 1) }
+.secondary-b-4 { color: rgba(240, 214, 171, 1) }
+
+    /*background: rgba( 87, 140, 181, 0.3);        [> Основной Цвет <]*/
+    /*background: rgba( 87, 140, 181, 0.3);*/
+    /*background: rgba( 99,  61, 156, 0.3);*/
+    /*background: rgba(166, 171, 181, 0.3);*/
+    /*background: rgba(212, 217, 219, 0.3);*/
+
+    /*background: rgba(255, 255,  10, 0.3);    [> Вторичный Цвет A <]*/
+    /*background: rgba(133, 166, 122, 0.3);*/
+    /*background: rgba( 79, 168,  51, 0.3);*/
+    /*background: rgba(191, 227, 186, 0.3);*/
+    /*background: rgba(191, 227, 186, 0.3);*/
+
+    /*background: rgba(247, 153,  92, 0.3);    [> Вторичный Цвет B <]*/
+    /*background: rgba(247, 153,  92, 0.3);*/
+    /*background: rgba(224,  94,  31, 0.3);*/
+    /*background: rgba(217, 186, 140, 0.3);*/
+    /*background: rgba(240, 214, 171, 0.3);*/
 * {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -65,12 +103,16 @@ input {
     max-width: 100%;
     width: 200px;
     height: 1.5em;
-    border: 1px solid #e5e5e5;
+    border: 0px solid #e5e5e5;
     margin: 5px 5px 5px 5px;
     border-radius: 7px;
     padding: 0.1em;
     padding-left: 0.5em;
     background: rgba(255, 255, 255, 1);
+}
+input:focus {
+    border-radius: 10px;
+    border: 1pt solid #578cb5;
 }
 div {
     /*resize: both;*/
@@ -98,13 +140,6 @@ div {
     outline-style: none;
 
 }
-.allspace {
-    position: absolute;
-    opacity: 1;
-    top: 7%;
-    width: 100%;
-    height: 100%;
-}
 .parameters {
     min-height: 16em;
     max-height: 60%;
@@ -116,9 +151,12 @@ div {
     float: left;
     /*padding: 1ex;*/
     margin: 2em;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
     border-radius: 10px;
+    border: 1pt solid #578cb5;
     overflow: auto;
+}
+.parameters:focus {
+    outline: 1px solid red;
 }
 .parameters > input {
     max-width: 30%;
@@ -132,23 +170,12 @@ div {
     background: rgba(191, 0, 0, 0);
     padding: 0px;
 }
-.vfill {
-    max-height: 50%;
-    height: 900px;
-    max-width: 20%;
-    width: 600px;
-    display: inline;
-    float: left;
-    opacity: 0;
-}
-.thinvfill {
-    max-height: 50%;
-    height: 900px;
-    max-width: 5%;
-    width: 100px;
-    display: inline;
-    float: left;
-    opacity: 0;
+.parameters > .parline {
+    position: relative;
+    margin: 1em;
+    padding: 1ex;
+    width: 100%;
+    height: 1.2em;
 }
 .ok {
     position: relative;
@@ -205,16 +232,32 @@ div {
 }
 .content{
     max-width: 50%;
-    width: 80em;
+    min-width: 80ex;
+    width: 90ex;
     height: 110%;
     margin-left: 25%;
-    border: 1pt solid #578cb5;
+    border: 1pt dashed #578cb5;
 }
 .content > p {
     width: 100%;
     max-width: 80em;
-    padding-left: 5em;
     margin: 2em;
+}
+.content > .textcontent {
+    position: relative;
+    left: -15%;
+    bottom: 5%;
+    max-width: 50%;
+    min-width: 40ex;
+    width: 50ex;
+    height: 100%;
+    padding: 1ex;
+    border: 0pt solid red;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0);
+}
+.textcontent > p{
+    width: 100%;
+    font-size: 1.5ex;
 }
 .bubble {
     position: absolute;
@@ -228,6 +271,11 @@ div {
     box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
     z-index: 0;
     color: #4FA833;
+}
+.bubble > p{
+    color: inherit;
+    font-style: italic;
+    font-size: 2em;
 }
 .littlebubble {
     position: absolute;
@@ -258,12 +306,44 @@ div {
     /*color: #d9ba8c;*/
     /*color: #f0d6ab;*/
 }
-.bubble > p{
-    color: inherit;
-    font-style: italic;
-    font-size: 2em;
-}
 .littlebubble > p{
     color: inherit;
     font-style: italic;
 }
+.tinybubble {
+    position: absolute;
+    border-radius: 6em;
+    padding: 1em;
+    width: 6em;
+    height: 6em;
+    overflow: hidden;
+    border: 1pt solid;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+    z-index: 0;
+    color: #633d9c;
+    background: rgba( 99,  61, 156, 0.3);
+}
+.tinybubble > p{
+    color: inherit;
+    font-style: italic;
+    font-size: 1.5ex;
+}
+.bigbubble {
+    position: absolute;
+    border-radius: 16em;
+    padding: 3em;
+    width: 16em;
+    height: 16em;
+    overflow: hidden;
+    border: 1pt solid;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.7);
+    z-index: 0;
+    color: #A6ABB5;
+    background: rgba(212, 217, 219, 0.3);
+}
+.bigbubble > p{
+    color: inherit;
+    font-style: italic;
+    font-size: 5ex;
+}
+
