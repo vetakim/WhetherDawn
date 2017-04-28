@@ -55,6 +55,7 @@
     /*background: rgba(224,  94,  31, 0.3);*/
     /*background: rgba(217, 186, 140, 0.3);*/
     /*background: rgba(240, 214, 171, 0.3);*/
+
 * {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -88,7 +89,7 @@ p {
     color: inherit;
 }
 form {
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 1);
 }
 button {
     max-width: 50%;
@@ -155,6 +156,7 @@ div {
     border: 1pt solid #578cb5;
     overflow: auto;
     background: rgba(255, 255, 255, 1);
+    z-index: 4;
 }
 .parameters > input {
     max-width: 30%;
@@ -169,44 +171,47 @@ div {
     padding: 0px;
 }
 .parameters.parline {
+    background: inherit;
     position: relative;
     display: inline;
     float: right;
     margin: 1em;
-    padding: 1ex;
     width: 100%;
-    height: 1.2em;
-    background: red;
+    height: 3.0ex;
+    max-height: 5ex;
 }
 .parline > input {
     position: relative;
     display: inline;
     float: right;
-    max-width: 45%;
-    height: 2.0em;
-    max-height: 10%;
-    width: 7em;
-    /*margin-top: 1.2ex;*/
+    max-width: 50%;
+    height: 2.5ex;
+    max-height: 10ex;
+    width: 8em;
+    margin-top: 2ex;
 }
 .parline > p {
     position: relative;
     display: inline;
     float: right;
-    max-width: 45%;
-    height: 2.0em;
-    max-height: 13%;
-    width: 7em;
-    margin-top: 1ex;
+    max-width: 50%;
+    height: 2.5ex;
+    max-height: 3ex;
+    width: 8em;
+    margin-top: -1ex;
+    margin-bottom: 2ex;
+    font-size: 1em;
+
 }
 .parline > label {
     position: relative;
     display: inline;
     float: left;
-    max-width: 45%;
-    width: 8em;
-    height: 2.0em;
-    max-height: 10%;
-    margin-top: 1ex;
+    max-width: 50%;
+    height: 2.5ex;
+    max-height: 3ex;
+    width: 7em;
+    margin-top: 2ex;
 }
 .ok {
     position: relative;
