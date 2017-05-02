@@ -4,7 +4,12 @@
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static "dawnstyle.css" %}">
     </head>
-    <div class="cap" align="center"> Sunrise & Sunset </div>
+    <div class="cap" align="left">
+        <img src="{% static "images/logo.png" %}"> </img>
+        <div>
+            Sunrise & Sunset
+        </div>
+    </div>
         {% block content %}
         {% endblock %}
 </html>

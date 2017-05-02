@@ -80,7 +80,6 @@ h1 {
 }
 h2 {
     font-size:1.2em;
-    /*color: #93a1a1;*/
 }
 p {
     background: rgba(191, 227, 186, 0);
@@ -139,19 +138,27 @@ div {
     outline: medium none;
     outline-width: medium;
     outline-style: none;
-
+}
+.cap > img {
+    margin-left: 1%;
+    margin-top: 20px;
+    height: 150%;
+    width: 10%;
+}
+.cap > div {
+    position: relative;
+    display: inline;
+    color: inherit;
+    margin-left: 5%;
 }
 .parameters {
-    min-height: 16em;
-    max-height: 60%;
-    height: 21em;
-    width: 24em;
-    max-width: 30%;
-    min-width: 19em;
+    position: relative;
+    height: 50%;
+    width: 21em;
+    max-width: 33%;
     display: inline;
-    float: left;
+    float: right;
     padding: 2ex;
-    margin: 2em;
     border-radius: 10px;
     border: 1pt solid #578cb5;
     overflow: auto;
@@ -269,12 +276,10 @@ div {
     font-size: 1em;
 }
 .content{
-    max-width: 50%;
-    min-width: 80ex;
-    width: 90ex;
-    height: 110%;
-    margin-left: 25%;
-    border: 1pt dashed #578cb5;
+    max-width: 60%;
+    width: 65em;
+    height: 100%;
+    margin-left: 20%;
 }
 .content > p {
     width: 100%;
@@ -297,91 +302,65 @@ div {
     width: 100%;
     font-size: 1.5ex;
 }
-.bubble {
-    position: absolute;
-    border-radius: 12em;
-    background: rgba(191, 227, 186, 0.5);
-    padding: 3em;
-    width: 12em;
-    height: 12em;
-    overflow: hidden;
-    border: 1pt solid;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    z-index: 0;
-    color: #4FA833;
-}
-.bubble > p{
-    color: inherit;
-    font-style: italic;
-    font-size: 2em;
-}
-.littlebubble {
-    position: absolute;
-    border-radius: 8em;
-    background: rgba(255, 255, 10, 0.3);
-    padding: 2em;
-    width: 8em;
-    height: 8em;
-    overflow: hidden;
-    border: 1pt solid;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    z-index: 0;
-    /*color: #578cb5;       [> Основной Цвет <]*/
-    /*color: #578cb5;*/
-    /*color: #633d9c;*/
-    /*color: #a6abb5;*/
-    /*color: #d4d9db;*/
 
-    /*color: #ffff0a;   [> Вторичный Цвет A <]*/
-    /*color: #85a67a;*/
-    /*color: #4fa833;*/
-    /*color: #bfe3ba;*/
-    /*color: #bfe3ba;*/
-
-    /*color: #f7995c;   [> Вторичный Цвет B <]*/
-    color: #f7995c;
-    /*color: #e05e1f;*/
-    /*color: #d9ba8c;*/
-    /*color: #f0d6ab;*/
+.weatherhandler {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 30%;
 }
-.littlebubble > p{
-    color: inherit;
-    font-style: italic;
+.inbubble {
+    position: relative;
+    display: block;
+    float: left;
+    overflow: hidden;
+    height: 100%;
+    width: 25%;;
+    color: #ffffff;
 }
-.tinybubble {
+.inbubble > p {
     position: absolute;
-    border-radius: 6em;
+    top: 5%;
+    left: 20%;
+}
+.inbubble > img {
+    position: relative;
+    width: 95%;
+    height: 95%;
+}
+.inbubble > .smaller {
+    position: relative;
+    width: 90%;
+    height: 90%;
+}
+.smaller + p {
+    font-size: 0.9em;
+}
+.inbubble > .smaller2 {
+    position: relative;
+    width: 80%;
+    height: 80%;
+}
+.smaller2 + p {
+    font-size: 0.8em;
+}
+.inbubble > .smaller3 {
+    position: relative;
+    width: 75%;
+    height: 75%;
+}
+.smaller3 + p {
+    font-size: 0.7em;
+}
+
+.content > .essen {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 40em;
+    max-width: 55%;
+    height: 50%;
+    border: 1pt solid red;
     padding: 1em;
-    width: 6em;
-    height: 6em;
-    overflow: hidden;
-    border: 1pt solid;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-    z-index: 0;
-    color: #633d9c;
-    background: rgba( 99,  61, 156, 0.3);
-}
-.tinybubble > p{
-    color: inherit;
-    font-style: italic;
-    font-size: 1.5ex;
-}
-.bigbubble {
-    position: absolute;
-    border-radius: 16em;
-    padding: 3em;
-    width: 16em;
-    height: 16em;
-    overflow: hidden;
-    border: 1pt solid;
-    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.7);
-    z-index: 0;
-    color: #A6ABB5;
-    background: rgba(212, 217, 219, 0.3);
-}
-.bigbubble > p{
-    color: inherit;
-    font-style: italic;
-    font-size: 5ex;
 }
 
