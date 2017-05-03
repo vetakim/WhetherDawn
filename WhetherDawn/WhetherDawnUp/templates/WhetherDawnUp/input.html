@@ -1,103 +1,15 @@
 {% extends "WhetherDawnUp/base.html" %}
 {% block content %}
 {% load static %}
-<div class="content">
-    <div class="essen">
-        <p>
-        <br> Проснись, на востоке уже встало пиво. </br>
-        <br> Смотри, рядом с пивом забрезжило солнце. </br>
-        <br> Учти, это солнце сейчас станет блюзом. </br>
-        <br> Поверь, этих блюзов надолго не хватит...  </br>
-        </p>
-    </div>
-    <div id="parameters" class="parameters">
-        <form action="" method="post">
-            {% csrf_token %}
-            {% for field in form %}
-            <div class="parline"> {{ field.label_tag }} {{ field}} </div>
-            {% endfor %}
-            <div class="parline">
-                <label> Sunrise time: </label> <p> {{ results.time_rise }}  </p>
-            </div>
-            <div class="parline">
-                <label> Sunset time: </label> <p> {{ results.time_set }}  </p>
-            </div>
-            <div class="ok">
-                <input type=submit value='OK, calculate' class="oki"> </input>
-            </div>
-        </form>
-    </div>
-
-    <div class="weatherhandler">
-        <div class="inbubble">
-            <img src="{% static "images/bubblelight.png" %}" alt=""/>
-            <p id="current"> What is the weather like today in London? </p>
-        </div>
-
-        <div class="inbubble">
-            <img src="{% static "images/bubblelight.png" %}" alt="" class="smaller"/>
-            <p id="moscow"> What is the weather like today in Moscow?</p>
-        </div>
-
-        <div class="inbubble">
-            <img src="{% static "images/bubblelight.png" %}" alt="" class="smaller2"/>
-            <p id="peter"> What is the weather like today in Saint Petersburg?</p>
-        </div>
-
-        <div class="inbubble">
-            <img src="{% static "images/bubblelight.png" %}" alt="" class="smaller3"/>
-            <p id="nurlat"> What is the weather like today in Nurlat?</p>
-        </div>
-    </div>
-
-
-    <script type="text/javascript">
-function dms2grad(dms) {
-    var dms = dms.split("°");
-    var ms = dms[1].split("\′");
-    var m = ms[0];
-    var s = ms[1].split("\″")[0];
-    return parseInt(dms) + parseInt(m) / 60 + parseInt(s) / 3600;
-}
-
-function getInfo(json) {
-    var info = "<br><u>" +  json.name + "</u></br>";
-    info += "<br> Wind " + json.wind.speed + " m/s </br>";
-    info += "<br> Temperature " + json.main.temp + " °C </br>";
-    info += "<br> Cloudiness " + json.clouds.all + " % </br>";
-    return info;
-}
-
-function getWeatherData(cityId, lat, lon) {
-    var apireq = new XMLHttpRequest();
-    var apiref = "http://api.openweathermap.org/data/2.5/weather?";
-    if ( cityId === 0 ) {
-        apiref += "lat=" + dms2grad(lat) + "&";
-        apiref += "lon=" + dms2grad(lon) + "&";
-    } else {
-        apiref += "id=" + cityId + "&";
-    }
-    apiref += "units=metric&";
-    apiref += "APPID=30a72912a9f6bc40e2a104bf3f853556";
-    apireq.open("GET", apiref, false);
-    apireq.send();
-    var wdata = JSON.parse(apireq.response);
-    return wdata;
-}
-
-var lon = "{{ form.coord_L.value }}";
-var lat = "{{ form.coord_B.value }}";
-wdata = getWeatherData(0, lat, lon);
-document.getElementById("current").innerHTML  = getInfo(wdata);
-
-mdata = getWeatherData(524901, 0, 0);
-pdata = getWeatherData(498817, 0, 0);
-ndata = getWeatherData(516716, 0, 0);
-document.getElementById("moscow").innerHTML  = getInfo(mdata);
-document.getElementById("peter").innerHTML  = getInfo(pdata);
-document.getElementById("nurlat").innerHTML  = getInfo(ndata);
-
-    </script>
+<div class="orange strip">
+</div>
+<div class="violet strip">
+</div>
+<div class="dark-adorable strip">
+</div>
+<div class="gray strip">
+</div>
+<div class="light-gray strip">
 </div>
 
 {% endblock %}

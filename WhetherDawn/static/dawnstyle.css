@@ -38,24 +38,6 @@
 .secondary-b-3 { color: rgba(217, 186, 140, 1) }
 .secondary-b-4 { color: rgba(240, 214, 171, 1) }
 
-    /*background: rgba( 87, 140, 181, 0.3);        [> Основной Цвет <]*/
-    /*background: rgba( 87, 140, 181, 0.3);*/
-    /*background: rgba( 99,  61, 156, 0.3);*/
-    /*background: rgba(166, 171, 181, 0.3);*/
-    /*background: rgba(212, 217, 219, 0.3);*/
-
-    /*background: rgba(255, 255,  10, 0.3);    [> Вторичный Цвет A <]*/
-    /*background: rgba(133, 166, 122, 0.3);*/
-    /*background: rgba( 79, 168,  51, 0.3);*/
-    /*background: rgba(191, 227, 186, 0.3);*/
-    /*background: rgba(191, 227, 186, 0.3);*/
-
-    /*background: rgba(247, 153,  92, 0.3);    [> Вторичный Цвет B <]*/
-    /*background: rgba(247, 153,  92, 0.3);*/
-    /*background: rgba(224,  94,  31, 0.3);*/
-    /*background: rgba(217, 186, 140, 0.3);*/
-    /*background: rgba(240, 214, 171, 0.3);*/
-
 * {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 1em;

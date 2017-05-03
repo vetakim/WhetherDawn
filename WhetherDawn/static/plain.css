@@ -1,0 +1,137 @@
+/*colorschemes:*/
+.blue {
+    background: rgba( 87, 140, 181, 1);
+    color: white;
+}
+.violet {
+background: rgba( 99,  61, 156, 1);
+}
+.gray { background: rgba(166, 171, 181, 1) }
+.light-gray { background: rgba(212, 217, 219, 1) }
+.orange {
+    color: white;
+    background: rgba(247, 153,  92, 1);
+}
+.yellow { background: rgba(255, 255,  10, 1) }    /* Вторичный Цвет A */
+.marsh-green { background: rgba(133, 166, 122, 1) }
+.green { background: rgba( 79, 168,  51, 1) }
+.light-green { background: rgba(191, 227, 186, 1) }
+.terracota { background: rgba(224,  94,  31, 1) }
+.sienna { background: rgba(217, 186, 140, 1) }
+.beige { background: rgba(240, 214, 171, 1) }
+.bloody-red { background: rgba(255,   0,   0, 1) }        /* Основной Цвет */
+.muffled-red { background: rgba(191,  48,  48, 1) }
+.dark-red { background: rgba(166,   0,   0, 1) }
+.light-red { background: rgba(255,  64,  64, 1) }
+.pink-red { background: rgba(255, 115, 115, 1) }
+.adorable { background: rgba(  0, 153, 153, 1) }    /* Вторичный Цвет A */
+.dark-adorable { background: rgba( 29, 115, 115, 1) }
+.very-dark-adorable { background: rgba(  0,  99,  99, 1) }
+.light-adorable { background: rgba( 51, 204, 204, 1) }
+.very-light-adorable { background: rgba( 92, 204, 204, 1) }
+.very-light-green { background: rgba(201, 247, 111, 1) }
+.violet { background: #867194}
+
+* {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0);
+}
+table, tbody, tr, td {
+    color: inherit;
+    overflow: hidden;
+    width: inherit;
+}
+h1 {
+    font-size: 50pt;
+    color: #ffffff;
+    position: fixed;
+    left: 25%;
+    z-index: 0;
+    background: #578cb5;
+    position: fixed;
+    top: 5px;
+}
+h2 {
+    font-size:1.2em;
+}
+p, br, u {
+    font-size: 1em;
+    font-weight: normal;
+    color: inherit;
+    overflow: hidden;
+}
+
+form {
+    background: rgba(255, 255, 255, 1);
+}
+button {
+    max-width: 50%;
+    width: 200px;
+    max-height: 10%;
+    height: 35px;
+    position: absolute;
+    left: 45%;
+    overflow: hidden;
+}
+input {
+    max-width: 100%;
+    width: 200px;
+    height: 1.5em;
+    border: 0px solid #e5e5e5;
+    margin: 5px 5px 5px 5px;
+    border-radius: 7px;
+    padding: 0.1em;
+    padding-left: 0.5em;
+    background: rgba(255, 255, 255, 1);
+}
+input:focus {
+    border-radius: 10px;
+    border: 1pt solid #578cb5;
+}
+
+.strip {
+    position: relative;
+    display: block;
+    max-height: 50%;
+    height: 350px;
+    width: 110%;
+    font-size: 20px;
+    margin: 1%;
+    margin-top: -1%;
+    margin-right: -1%;
+    margin-bottom: 0%;
+    margin-left: -1%;
+    padding: 5%;
+    padding-top: 5%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    padding-left: 10%;
+    outline: medium none;
+    outline-width: medium;
+    outline-style: none;
+    overflow: hidden;
+}
+.strip > img {
+    margin-left: 1%;
+    margin-top: 20px;
+    height: 150%;
+    width: 10%;
+}
+.rigid {
+    position: fixed;
+    display: block;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+}
+
+#content {
+    width: 110%;
+    position: absolute;
+    top: 250px;
+    left: 0%;
+}
+#cap {
+    opacity: 0.85;
+}

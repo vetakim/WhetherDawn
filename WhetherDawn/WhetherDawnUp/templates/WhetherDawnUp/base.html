@@ -1,15 +1,28 @@
 <html>
-    <head>
-        <title> WhetherDawn</title>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static "dawnstyle.css" %}">
-    </head>
-    <div class="cap" align="left">
-        <img src="{% static "images/logo.png" %}"> </img>
-        <div>
-            Sunrise & Sunset
+
+<head>
+    <title> WhetherDawn</title>
+    {% load static %}
+    <script type="text/javascript" src="{% static "js/weather.js" %}"> </script>
+    <script type="text/javascript" src="{% static "js/placing.js" %}"> </script>
+    <link rel="stylesheet" type="text/css" href="{% static "plain.css" %}">
+</head>
+<body onresize="contentLifting()" onload="contentLifting()">
+
+    <div class="blue rigid strip" id="cap" align="left">
+        <div id="moscow">
+            <script type="text/javascript">
+                drawMoscow();
+                setInterval( drawMoscow, 600000);
+            </script>
         </div>
     </div>
+
+    <div id="content">
         {% block content %}
         {% endblock %}
+    </div>
+
+</body>
+
 </html>
