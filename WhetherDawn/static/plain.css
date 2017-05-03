@@ -97,7 +97,8 @@ input {
     margin-top: 0px;
     outline: 0;
     padding: 3%;
-    padding-left: 30%;
+    padding-left: 20%;
+    padding-bottom: 0%;
     border: 1pt solid white;
     border-radius: 10px;
 }
@@ -110,6 +111,9 @@ input:focus {
     border-radius: 8px;
     opacity: 1;
     box-shadow: 0 0 10px white;
+    width: 95%;
+    height: 3.0em;
+    padding-bottom: 1%;
 }
 
 .strip {
@@ -170,7 +174,7 @@ input:focus {
     padding-left: 10%;
     height: 400px;
 }
-#location {
+#iodata {
     height: 90%;
     width: 40%;
     float: left;
@@ -178,31 +182,34 @@ input:focus {
     margin: 1em;
 }
 
-#location + div {
+#iodata + div {
+    position: relative;
+    display: inline;
+    border: 1pt solid white;
+}
+
+.idata {
+    float: right;
+    width: 30%;
+}
+
+.idataitem {
     position: relative;
     display: block;
-    border: inherit;
-    margin: 3px;
-}
-
-.location {
-    position: relative;
-    left: 60%;
-    width: 31%;
-    padding: 1%;
-}
-
-.results {
-    position: relative;
-    top: -90%;
     left: 0%;
-    height: 90%;
-    width: 50%;
+    width: 100%;
+    padding: 2%;
+}
+
+.odata {
+    width: 65%;
     padding: 1%;
     border: 1pt solid white;
     border-radius: 10px;
+    height: 100%;
+    opacity: 0.8;
 }
-.results > p, br {
+.odata > p, br {
     color: white;
     font-size: 14pt;
 }

@@ -16,25 +16,26 @@
                 setInterval( drawMoscow, 600000);
             </script>
         </div>
-        <div id="location">
+        <div id="iodata">
             <form action="" method="post">
                 {% csrf_token %}
-                {% for field in form %}
-                <div class="location">
-                    {{ field.label_tag }} {{ field }}
-                </div>
-                {% endfor %}
-                <div class="location">
-                    <input type=submit value='OK, calculate' id="ok"> </input>
+                <div class="idata">
+                    {% for field in form %}
+                    <div class="idataitem">
+                        {{ field.label_tag }} {{ field }}
+                    </div>
+                    {% endfor %}
+                    <div class="idataitem">
+                        <input type=submit value='OK, calculate' id="ok"> </input>
+                    </div>
                 </div>
 
-                <div class="results">
+                <div class="odata">
                     <p>
                     <br> Sunrise time: {{ results.time_rise }} </br>
                     <br> Sunset time:  {{ results.time_set }} </br>
                     </p>
                 </div>
-
             </form>
         </div>
     </div>
