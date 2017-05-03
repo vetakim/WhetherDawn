@@ -11,6 +11,7 @@ function getInfo(json) {
     info += "<br> Wind " + json.wind.speed + " m/s </br>";
     info += "<br> Temperature " + json.main.temp + " °C </br>";
     info += "<br> Cloudiness " + json.clouds.all + " % </br>";
+    info += json.error;
     return info;
 }
 
