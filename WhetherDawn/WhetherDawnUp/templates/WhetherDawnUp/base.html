@@ -8,42 +8,19 @@
     <link rel="stylesheet" type="text/css" href="{% static "plain.css" %}">
 
 </head>
-<body onresize="contentLifting()" onload="contentLifting()">
 
-    <div class="adorable rigid strip" id="cap" align="left">
-        <div id="moscow">
-            <script type="text/javascript">
-                drawMoscow();
-                setInterval( drawMoscow, 600000);
-            </script>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            {% block content %}
+            {% endblock %}
         </div>
-        <div id="iodata">
-            <form action="" method="post">
-                {% csrf_token %}
-                <div class="idata">
-                    {% for field in form %}
-                    <div class="idataitem">
-                        {{ field.label_tag }} {{ field }}
-                    </div>
-                    {% endfor %}
-                    <div class="idataitem">
-                        <input type=submit value='OK, calculate' id="ok"> </input>
-                    </div>
-                </div>
 
-                <div class="odata">
-                    <p>
-                    <br> Рассвет: {{ results.time_rise }} </br>
-                    <br> Sunset time:  {{ results.time_set }} </br>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div id="content">
-        {% block content %}
-        {% endblock %}
+        <footer class="dark-gray">
+            <br> Sergium </br>
+            <br> Koalic </br>
+            <br> Moscow </br>
+        </footer>
     </div>
 
 </body>
