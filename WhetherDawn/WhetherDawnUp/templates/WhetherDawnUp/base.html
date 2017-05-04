@@ -6,10 +6,11 @@
     <script type="text/javascript" src="{% static "js/weather.js" %}"> </script>
     <script type="text/javascript" src="{% static "js/placing.js" %}"> </script>
     <link rel="stylesheet" type="text/css" href="{% static "plain.css" %}">
+
 </head>
 <body onresize="contentLifting()" onload="contentLifting()">
 
-    <div class="blue rigid strip" id="cap" align="left">
+    <div class="adorable rigid strip" id="cap" align="left">
         <div id="moscow">
             <script type="text/javascript">
                 drawMoscow();
@@ -32,7 +33,7 @@
 
                 <div class="odata">
                     <p>
-                    <br> Sunrise time: {{ results.time_rise }} </br>
+                    <br> Рассвет: {{ results.time_rise }} </br>
                     <br> Sunset time:  {{ results.time_set }} </br>
                     </p>
                 </div>
