@@ -2,33 +2,8 @@
 {% block content %}
 {% load static %}
 
-<header class="adorable strip" id="cap" align="left">
-    Enjoy the sunlight
-</header>
-<div class="adorable" id="iodata">
-    <form action="" method="post">
-        {% csrf_token %}
-        <div class="idata">
-            {% for field in form %}
-            <div class="idataitem">
-                {{ field.label_tag }} {{ field }}
-            </div>
-            {% endfor %}
-            <div class="idataitem">
-                <input type=submit value='OK, calculate' id="ok"> </input>
-            </div>
-        </div>
-
-        <div class="odata">
-            <p>
-            <br> Рассвет: {{ results.time_rise }} </br>
-            <br> Sunset time:  {{ results.time_set }} </br>
-            </p>
-        </div>
-    </form>
-</div>
-
-<div class="blue strip">
+<header class="dark-gray strip" id="cap" align="left">
+    <div class="lozung"> Enjoy the sunlight </div>
     <div id="moscow">
         <script type="text/javascript">
 drawMoscow();
@@ -42,8 +17,6 @@ setInterval( getWeatherData, 600000);
 document.getElementById("peter").innerHTML  = getInfo(pdata);
         </script>
     </div>
-</div>
-<div class="dark-gray narrow strip">
     <div id="nurlat">
         <script type="text/javascript">
 var ndata = getWeatherData(516716, 0, 0);
@@ -51,6 +24,37 @@ setInterval( getWeatherData, 600000);
 document.getElementById("nurlat").innerHTML  = getInfo(ndata);
         </script>
     </div>
+</header>
+
+<div class="adorable strip">
+    <div class="dark-gray" id="iodata">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="idata">
+                {% for field in form %}
+                <div class="idataitem">
+                    {{ field.label_tag }} {{ field }}
+                </div>
+                {% endfor %}
+                <div class="idataitem">
+                    <input type=submit value='OK' id="ok"> </input>
+                </div>
+            </div>
+
+            <div class="odata">
+                <p>
+                <br> Рассвет: {{ results.time_rise }} </br>
+                <br> Sunset time:  {{ results.time_set }} </br>
+                </p>
+            </div>
+        </form>
+    </div>
+    <div>
+        There will be an animation soon
+    </div>
 </div>
+
+<!--</div>-->
+<!--<div class="dark-gray narrow strip">-->
 
 {% endblock %}

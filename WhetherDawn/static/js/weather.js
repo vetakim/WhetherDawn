@@ -7,7 +7,7 @@ function dms2grad(dms) {
 }
 
 function getInfo(json) {
-    var info = "<br><u>" +  json.name + "</u></br>";
+    var info = "<br>" +  json.name + "</br>";
     info += "<br> Wind " + json.wind.speed + " m/s </br>";
     info += "<br> Temperature " + json.main.temp + " °C </br>";
     info += "<br> Cloudiness " + json.clouds.all + " % </br>";
