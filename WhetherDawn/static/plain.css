@@ -262,48 +262,84 @@ input:hover {
     0% {
         background: red;
     }
-    12% {
+    6% {
         transform: translate(50px, -114px);
         background: #EEC288;
     }
-    25% {
+    12% {
         transform: translate(100px, -213px);
         background: #EEC288;
     }
-    37% {
+    19% {
         transform: translate(150px, -276px);
         background: #f9eec7;
     }
-    50% {
+    25% {
         transform: translate(200px, -300px);
         background: #fcf6e0;
     }
-    62% {
+    31% {
         transform: translate(250px, -276px);
         background: #f9eec7;
     }
-    75% {
+    37% {
         transform: translate(300px, -213px);
         background: #EEC288;
     }
-    87% {
+    43% {
         transform: translate(350px, -114px);
         background: #EEC288;
     }
-    97% {
+    50% {
         transform: translate(380px, -10px);
         background: red;
     }
+    51% {
+        background-color: transparent;
+    }
     100% {
+        background-color: transparent;
+    }
+}
+@keyframes moonmove {
+    0% {
         opacity: 0;
+    }
+    56% {
+        opacity: 1;
+        transform: translate(50px, -114px);
+    }
+    62% {
+        transform: translate(100px, -213px);
+    }
+    69% {
+        transform: translate(150px, -276px);
+    }
+    75% {
+        transform: translate(200px, -300px);
+    }
+    81% {
+        transform: translate(250px, -276px);
+    }
+    87% {
+        transform: translate(300px, -213px);
+    }
+    93% {
+        transform: translate(350px, -114px);
+    }
+    100% {
+        transform: translate(380px, -10px);
     }
 }
 @keyframes day {
     0% {
         background: #3F5353;
     }
-    50% {
+    25% {
         background-color: transparent;
+    }
+    50% {
+        background: #3F5353;
     }
     100% {
         background: #3F5353;
@@ -314,7 +350,7 @@ input:hover {
     height: 400px;
     border: 10px groove #FCF6E0;
     animation-name: day;
-    animation-duration: 20s;
+    animation-duration: 24s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -339,11 +375,32 @@ input:hover {
     height: 50px;
     border-radius: 30px;
     animation-name: riseset;
-    animation-duration: 20s;
-    animation-delay: 1s;
+    animation-duration: 24s;
+    animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    animation-fill-mode: none;
     filter: blur(2px);
     overflow: hidden;
     z-index: 0;
+}
+
+.moon {
+    position: absolute;
+    left: 10px;
+    top: 390px;
+    width: 50px;
+    height: 50px;
+    background-image: url("./images/halfmoon.png");
+    background-color: transparent;
+    background-size: cover;
+    animation-name: moonmove;
+    animation-duration: 24s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    filter: blur(0.3px);
+    overflow: hidden;
+    z-index: 0;
+    opacity: 0;
 }
